@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.crud.spring.dao.IAsignadoADAO;
 import com.crud.spring.dto.AsignadoA;
-import com.crud.spring.dto.Proyecto;
 
 @Service
 public class AsignadoAServiceImpl implements IAsignadoAService {

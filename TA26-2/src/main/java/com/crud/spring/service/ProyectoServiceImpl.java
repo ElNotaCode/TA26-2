@@ -9,7 +9,7 @@ import com.crud.spring.dao.IProyectoDAO;
 import com.crud.spring.dto.Proyecto;
 
 @Service
-public class ProyectoAsignadoA implements IProyectoService{
+public class ProyectoServiceImpl implements IProyectoService{
 	
 	@Autowired
 	IProyectoDAO iProyectoDAO;
@@ -38,7 +38,5 @@ public class ProyectoAsignadoA implements IProyectoService{
 	public void deleteProyecto(String id) {
 		iProyectoDAO.deleteById(id);
 	}
-	
-	
 
 }
