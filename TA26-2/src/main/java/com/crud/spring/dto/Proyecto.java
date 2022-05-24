@@ -24,7 +24,7 @@ public class Proyecto {
 	private int horas;
 	
 	@OneToMany
-	@JoinColumn(name="id_proyecto")
+	@JoinColumn(name="id") //las entidnades ONE TO MANY en el joinCOlumn tienen que referenciar a campos de su misma entidad
 	private List<AsignadoA> asignadoA;
 
 	public Proyecto() {

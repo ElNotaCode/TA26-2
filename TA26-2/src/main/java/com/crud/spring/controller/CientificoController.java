@@ -51,6 +51,7 @@ public class CientificoController {
 		return cientifico_actualizado;
 	}
 	
+	//puede fallar, hay que pasar a id int
 	@DeleteMapping("/cientificos/{dni}")
 	public void deleteCliente(@PathVariable(name="dni") String dni) {
 		cientificoServiceImpl.deleteCientifico(dni);

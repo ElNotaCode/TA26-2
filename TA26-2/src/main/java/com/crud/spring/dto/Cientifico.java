@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name="cientificos")
 public class Cientifico {
 	
+	// pasar a id int
 	@Id
 	private String dni;
 	@Column(name="nombre_apellidos")
@@ -39,7 +40,7 @@ public class Cientifico {
 	public String getDni() {
 		return dni;
 	}
-
+	
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
