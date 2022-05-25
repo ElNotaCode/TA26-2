@@ -1,0 +1,23 @@
+DROP DATABASE IF EXISTS proyectos;
+CREATE DATABASE proyectos;
+USE proyectos;
+
+CREATE TABLE cientificos(dni VARCHAR(8) PRIMARY KEY,
+nombre_apellidos NVARCHAR(255)
+);
+
+CREATE TABLE proyecto(id CHAR(4) PRIMARY KEY,
+nombre NVARCHAR(255),
+horas INT
+);
+
+CREATE TABLE asignado_a(id INT AUTO_INCREMENT PRIMARY KEY,
+dni VARCHAR(8),
+KEY (dni),
+FOREIGN KEY (dni) REFERENCES cientificos(dni)
+ON UPDATE CASCADE ON DELETE CASCADE,
+id_proyecto CHAR(4),
+KEY (id_proyecto),
+FOREIGN KEY (id_proyecto) REFERENCES proyecto(id)
+ON UPDATE CASCADE ON DELETE CASCADE
+);
